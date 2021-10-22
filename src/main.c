@@ -1,3 +1,13 @@
+/**
+ * @file main.c
+ * @author Julien PEYROL (peyrol.jul@gmail.com)
+ * @version 0.1
+ * @date 2021-10-22
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
+
 #include <stdio.h>
 #include <assert.h>
 #include "../include/dichotomy.h"
@@ -5,13 +15,15 @@
 
 int main()
 {
+	//dichotomy
 	int tab[10] = {1, 4, 12, 19, 20, 32, 33, 43, 45, 49};
 	assert(find_by_dichotomy(tab, 10, 33) == 6);
 	assert(find_by_dichotomy(tab, 10, 15) == -1);
 
+	//glouton
 	Glouton glout[3];
 	Glouton g1;
-	g1.prix = 12;
+	g1.prix = 7;
 	g1.poids = 6;
 	Glouton g2;
 	g2.prix = 5;

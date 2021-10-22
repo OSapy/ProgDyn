@@ -1,7 +1,7 @@
 /**
  * @file glouton.c
  * @author Julien PEYROL (peyrol.jul@gmail.com)
- * @brief  
+ * @brief  Algorithme glouton
  * @version 0.1
  * @date 2021-10-20
  * 
@@ -12,6 +12,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <../include/glouton.h>
+
+/**
+ * @brief tri le tableau en fonction du rapport qualité prix
+ * 
+ * @param glout -> tableau à trier
+ * @param longeurTab -> longeur du tableau
+ */
 
 void triGlout(Glouton glout[], int longeurTab)
 {
@@ -31,6 +38,15 @@ void triGlout(Glouton glout[], int longeurTab)
         }
     }
 }
+
+/**
+ * @brief insere les valeurs du tableau dans le sac
+ * 
+ * @param glout -> tableau
+ * @param longeurTab -> taille du tableau
+ * @param poidsMax -> poids max du sac
+ * @return totalPoids -> poids inséré dans le sac
+ */
 
 int insertGlouton(Glouton glout[], int longeurTab, int poidsMax)
 {
