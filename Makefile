@@ -25,7 +25,7 @@ INCLUDE	:= include
 
 # define lib directory
 LIB		:= lib
-
+DOXYGENCONF = Doxyfile
 ifeq ($(OS),Windows_NT)
 MAIN	:= main.exe
 SOURCEDIRS	:= $(SRC)
@@ -86,6 +86,13 @@ clean:
 	$(RM) $(call FIXPATH,$(OBJECTS))
 	@echo Cleanup complete!
 
+.PHONY: documentation
+
+documentation:
+	@doxygen Doxyfile
+	firefox ./output/html/index.html
+	@echo Documentation generation complete !
+	
 run: all
 	./$(OUTPUTMAIN)
 	@echo Executing 'run: all' complete!

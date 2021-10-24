@@ -10,12 +10,14 @@
 
 #include <stdio.h>
 #include <assert.h>
+#include <malloc.h>
 #include "../include/dichotomy.h"
 #include "../include/glouton.h"
+#include "../include/pgcb.h"
 
 int main()
 {
-	//dichotomy
+	/* //dichotomy
 	int tab[10] = {1, 4, 12, 19, 20, 32, 33, 43, 45, 49};
 	assert(find_by_dichotomy(tab, 10, 33) == 6);
 	assert(find_by_dichotomy(tab, 10, 15) == -1);
@@ -37,5 +39,10 @@ int main()
 	int poidsMAX = 10;
 	int longeur = 3;
 	triGlout(glout, longeur);
-	assert(insertGlouton(glout, longeur, poidsMAX) == 6);
+	assert(insertGlouton(glout, longeur, poidsMAX) == 6); */
+
+	//pgcb
+	int ligne = 10;
+	int colonne = 10;
+	seeMatrice(getMatrice(ligne, colonne), ligne, colonne);
 }
