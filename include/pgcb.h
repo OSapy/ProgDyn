@@ -8,5 +8,14 @@
  * 
  */
 
-int *getMatrix(int ligne, int colonne);
-void seeMatrix(const int *matrice, int x_size, int y_size);
+typedef struct
+{
+    int x;
+    int y;
+    int size;
+} Coord;
+
+int **initMatrix(int size, int obstacle);
+void affichageMatrice(int **matrice, int size);
+Coord pgcb(int **matrice, int size);
+void newAffichageMatrice(int **matrice, int size, Coord c);

@@ -1,8 +1,9 @@
 /**
  * @file main.c
- * @author Julien PEYROL (peyrol.jul@gmail.com)
+ * @author Julien Peyrol (peyrol.jul@gmail.com)
+
  * @version 0.1
- * @date 2021-10-22
+ * @date 2021-10-24
  * 
  * @copyright Copyright (c) 2021
  * 
@@ -17,7 +18,7 @@
 
 int main()
 {
-	/* //dichotomy
+	//dichotomy
 	int tab[10] = {1, 4, 12, 19, 20, 32, 33, 43, 45, 49};
 	assert(find_by_dichotomy(tab, 10, 33) == 6);
 	assert(find_by_dichotomy(tab, 10, 15) == -1);
@@ -39,10 +40,13 @@ int main()
 	int poidsMAX = 10;
 	int longeur = 3;
 	triGlout(glout, longeur);
-	assert(insertGlouton(glout, longeur, poidsMAX) == 6); */
+	assert(insertGlouton(glout, longeur, poidsMAX) == 6);
 
 	//pgcb
-	int ligne = 10;
-	int colonne = 10;
-	seeMatrice(getMatrice(ligne, colonne), ligne, colonne);
+	int SIZE = 12;
+	int **matrice = initMatrice(SIZE, 20);
+	affichageMatrice(matrice, SIZE);
+	printf("Affichage du carré: \n");
+	Coord coords = pgcb(matrice, SIZE);
+	newAffichageMatrice(matrice, SIZE, coords);
 }
